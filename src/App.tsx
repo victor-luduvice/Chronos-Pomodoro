@@ -1,27 +1,22 @@
-import 'styles/global.css';
-import 'styles/theme.css';
+
+import './styles/theme.css';
+import './styles/global.css';
+
+
 import { Container } from './components/Container';
-import { Heading } from './components/Headin';
-
-export function App() {
-
-    console.log('ola');
-    return (
+import { Heading } from './components/Heading';
+ 
+ export function App() {
+     
+     return (
        <>
-       <Container> 
-        <Heading text="LOGO" />
-        </Container>
-
-
-        <Container>
-            <Heading text="MENU" />
-        </Container>
-
-
-
-
-
+         <Container>
+          <Heading children="LOGO" />
+         </Container>
+ 
+         <Container>
+          <Heading children ="MENU" />
+         </Container>
        </>
-    );
-
-}
+     );
+ }

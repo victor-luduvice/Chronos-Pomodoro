@@ -1,12 +1,13 @@
-import styles from './Heading.module.css';
+import styles from './styles.module.css';
 
 interface ContainerProps {
   children: React.ReactNode;
-}   
+}
 
 export function Container({ children }: ContainerProps) {
-    return 
+  return (
     <div className={styles.container}>
-        <div className={styles.content}>{children}</div>
-    </div>;
+      <div className={styles.content}>{children}</div>
+    </div>
+  );
 }
