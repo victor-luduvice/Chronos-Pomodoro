@@ -1,6 +1,6 @@
 import 'styles/global.css';
 import 'styles/theme.css';
-import { Conteiner } from './components/Conteiner';
+import { Container } from './components/Container';
 import { Heading } from './components/Headin';
 
 export function App() {
@@ -8,14 +8,14 @@ export function App() {
     console.log('ola');
     return (
        <>
-       <Conteiner> 
+       <Container> 
         <Heading text="LOGO" />
-        </Conteiner>
+        </Container>
 
 
-        <Conteiner>
+        <Container>
             <Heading text="MENU" />
-        </Conteiner>
+        </Container>
 
 
 
