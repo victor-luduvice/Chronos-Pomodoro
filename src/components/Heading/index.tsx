@@ -1,4 +1,4 @@
-import styles from './styles.module.css';    // note the singular “module”
+import styles from './styles.module.css';   
 
 export interface HeadingProps {
   children: string;
