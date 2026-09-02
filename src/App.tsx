@@ -27,12 +27,7 @@ export function App() {
       <Container>
         <form className='from' action=''>
           <div className='formRow'>
-            <DefaultInput 
-            labelText='task' 
-            id='meuInput' 
-            type='text'
-            title='titulo' 
-            />
+            <DefaultInput labelText='task' id='meuInput' type='text'title='titulo' placehouder= 'Digite algo'/>
           </div>
 
           <div className='formRow'>
