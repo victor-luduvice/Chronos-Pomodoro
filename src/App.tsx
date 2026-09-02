@@ -1,12 +1,11 @@
 
-import './styles/theme.css';
-import './styles/global.css';
+import '../styles/theme.css';
+import '../styles/global.css';
 
 import { Container } from './components/Container';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu/App';
 import { CountDown } from './components/CountDown/App';
-import { FormIcon } from 'lucide-react';
 import { DefaultInput } from './components/DefaultInput';
 
 export function App() {
@@ -27,7 +26,7 @@ export function App() {
       <Container>
         <form className='from' action=''>
           <div className='formRow'>
-            <DefaultInput labelText='task' id='meuInput' type='text'title='titulo' placehouder= 'Digite algo'/>
+            <DefaultInput labelText='task' id='meuInput' type='text' title='titulo' placeholder='Digite algo'/>
           </div>
 
           <div className='formRow'>
