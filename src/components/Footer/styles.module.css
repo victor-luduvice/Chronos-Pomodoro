@@ -1,8 +1,6 @@
-.heading {
-
-    display: flex;
-    align-items: center;
+.footer {
+    diplay: flex;
+    align-items: column;
     justify-content: center;
-    gap: 2.4rem;
-    font-size: 2rem;
+    flex-direction: column;
 }
