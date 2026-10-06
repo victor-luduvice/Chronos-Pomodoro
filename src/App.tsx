@@ -4,28 +4,19 @@ import '../styles/global.css';
 
 import { Container } from './components/Container';
 import { Logo } from './components/Logo';
-import { Menu } from './components/Menu/App';
+import { Menu } from './components/Menu/index';
 import { CountDown } from './components/CountDown/App';
 import { DefaultInput } from './components/DefaultInput';
 import { Cycles } from './components/Cycles';
 import { DefaultButton } from './components/DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
 import { Footer } from './components/Footer';
-import { Heading } from './components/Heading';
-import { useState } from 'react';
+
 
 export function App() {
-  let [numero, setNumero] = useState(0);
-
-  function handleClick() {
-    setNumero(prevState => prevState + 1);
-  }
-
+  
   return (
     <>
-        <Heading>{`Número: ${numero}`}</Heading>
-     <button onClick={handleClick}>Aumenta</button>
-
       <Container>
         <Logo />
       </Container>
@@ -41,7 +32,13 @@ export function App() {
       <Container>
         <form className='from' action=''>
           <div className='formRow'>
-            <DefaultInput labelText='task' id='meuInput' type='text' title='titulo' placeholder='Digite algo'/>
+            <DefaultInput 
+            labelText='task' 
+            id='meuInput' 
+            type='text' 
+            title='titulo' 
+            placeholder='Digite algo'
+            />
           </div>
 
           <div className='formRow'>
