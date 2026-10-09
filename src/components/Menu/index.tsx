@@ -6,7 +6,16 @@ import { useState, type MouseEvent , useEffect } from "react";
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
-  const [theme, setTheme] = useState<AvailableThemes>('dark');
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const storedTheme = localStorage.getItem('theme') as AvailableThemes | null;
+    return storedTheme ?? 'dark';
+  });
+
+
+  const nexthemeIcon = {
+    dark: <SunIcon />,
+    light: <MoonIcon />,
+  }
 
   function handleThemeChange(event: MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
@@ -20,10 +29,7 @@ export function Menu() {
   useEffect(() => {
    console.log('theme mudou', theme, Date.now());
      document.documentElement.setAttribute('data-theme', theme);
-
-     return () => {
-         console.log('cleanup', theme, Date.now());
-      }
+     localStorage.setItem('theme', theme);
    }, [theme]);
 
   return (
@@ -63,7 +69,7 @@ export function Menu() {
         title="Theme"
         onClick={handleThemeChange}
       >
-        <SunIcon />
+        [nexThemeIcon[theme]]
       </a>
     </nav>
   );
