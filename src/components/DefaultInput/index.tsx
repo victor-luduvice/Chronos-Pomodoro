@@ -1,10 +1,10 @@
-import React from 'react';
+import type { ComponentProps } from 'react';
 import styles from './styles.module.css';
 
 type DefaultInputProps = {
   id: string;
   labelText ?: string; 
-} & React.ComponentProps<'input'>;
+} & ComponentProps<'input'>;
 
 export function DefaultInput({id, type, labelText, ...res}: DefaultInputProps){
   return(

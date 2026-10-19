@@ -1,10 +1,10 @@
-import React from 'react';
+import type { ComponentProps, ReactNode } from 'react';
 import styles from './styles.module.css';
 
 type DefaultButtonProps = {
- icon: React.ReactNode;
+ icon: ReactNode;
  color?: 'green' | 'red';
-} & React.ComponentProps<'button'>;
+} & ComponentProps<'button'>;
 
 export function DefaultButton({ icon, color = 'green',  ...props}: DefaultButtonProps){
   return(
